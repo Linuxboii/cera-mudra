@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cera-mudra"
+version = "1.0.0"
+description = "JWT inspector: decode, review for security issues, weak-secret check, HMAC verify and test-token creation."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sushanth Kasturi" }]
+requires-python = ">=3.10"
+keywords = ["jwt", "security", "authentication", "hmac", "pentest", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+    "Topic :: Security",
+]
+
+[project.scripts]
+cera-mudra = "cera_mudra.cli:main"
+
+[tool.setuptools]
+packages = ["cera_mudra"]
